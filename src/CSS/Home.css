@@ -85,4 +85,15 @@
     color: blue;
   }
   
+h2{
 
+    color: black;
+    font-size: 2rem;
+    font-family: 'Signika', sans-serif;
+    margin-left: -70px;
+}
+
+p{
+
+  font-size: 19.5px;
+}

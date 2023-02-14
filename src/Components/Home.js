@@ -16,8 +16,11 @@ function Home() {
                     <h1>
                     We Are Here For Your Care 
                     </h1>
+                    <h2>Welcome</h2>
                     <p>
-                      Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                    The Future of Healthcare is just front of you.
+                    The securest way to consult.
+                    Do not worry,We believe in your privacy.Get a personalized health Prescription with just one click.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
