@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Playfair+Display:ital,wght@1,400;1,900&family=Signika:wght@500&family=Ubuntu:ital,wght@0,300;0,400;1,400&display=swap');
+
+
+
+.navbar{
+   background-color:  #00dbde;
+    border-bottom: 5px solid white;
+}
+
+.nav-link{
+    color: white ;
+   
+}
+
+
+.logo{
+    color:
+   
+#8e0e00
+→ 
+#1f1c18;
+    font-family: 'Signika', sans-serif;
+    font-size:1.5rem;
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Signika', sans-serif;
+  
+}
+
+html {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  justify-content: center;
+  list-style: none;
+}
+
+.btn{
+
+    color: white;
+    border: 4px solid blue;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover{
+   
+     /* color: chartreuse; */
+     cursor: pointer;
+}
+
+.btn{
+  display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    margin-left: 50px;
+    margin-top: 10px;
+    justify-content:center ;
+    border-radius: 10px;
+    color: white;
+    width: 90px;
+}
+
+.btn:hover{
+
+      color: blue;
+
+}
+
+/* .container-fluid{
+    width: 100%;
+    height: 5rem;
+    display: grid;
+    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+    background-color: rgb(73, 228, 204);
+  }
+  */

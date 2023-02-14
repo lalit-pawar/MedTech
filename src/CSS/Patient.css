@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.hero{
+
+    height: 100%;
+    width: 100%;
+   
+    background-position: center;
+    background-size: cover;
+    margin-left: 16px;
+
+}
+.form{
+
+     width: 450px;
+     height: 450px;
+     position: relative;
+     margin: 3% auto;
+     background: #fff;
+     padding: 6px;
+     border-radius: 15px;
+}
+
+.button{
+     width: 200px;
+     margin: 30px;
+     align-items: center;
+     position: relative;
+     box-shadow: 0 0 15px 15px #FF61241f;
+     border-radius: 30px;
+     display: inline-flex;
+     align-items: center;
+}
+
+.toggle-btn{
+
+    padding: 10px 34px;
+    border: 0;
+    position: relative;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+
+}
