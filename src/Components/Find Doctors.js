@@ -7,7 +7,7 @@ import "../App.css";
    
   return (
      <>
-    <section class="doctor_section layout_padding">
+    <section className="doctor_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -113,73 +113,44 @@ import "../App.css";
       </div>
 
     
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  MedTech@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_detail">
-            <h4>
-              About
-            </h4>
-            <p>
-              unde dicta facilis minima veniam corporis laudantium alias tenetur eveniet illum reprehenderit fugit a delectus officiis blanditiis ea.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto footer_col">
-          <div class="footer_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="footer_links">
-              <a class="" href="index.html">
-                Home
-              </a>
-              <a class="" href="about.html">
-                About
-              </a>
-             
-              <a class="active" href="Patients.html">
-                Patients
-              </a>
-             
-            </div>
-          </div>
-        </div>
-       
-      </div>
-     </div>
-  </footer>
+      <footer class="site-footer section-padding" id="contact">
+           
+                <div class="row">
 
-    </div>
+                    <div class="col-lg-5 me-auto col-12">
+                        <h5 class="mb-lg-4 mb-3">Opening Hours</h5>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex">
+                                Sunday : Closed
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                Monday, Tuesday - Firday
+                                <span>8:00 AM - 3:30 PM</span>
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                Saturday
+                                <span>10:30 AM - 5:30 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-12 my-4 my-lg-0">
+                        <h5 class="mb-lg-4 mb-3">Our Clinic</h5>
+
+                        <p><a href="mailto:hello@MedTech.co">hello@MedTech.co</a>
+                        </p>
+
+                        <p>123 Digital Art Street, San Diego, CA 92123</p>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
   </section>
+
     </>
   )
 
