@@ -4,6 +4,31 @@ import '../CSS/Navbar.css'
 import '../App.css'
 
 export default function Navbar() {
+
+  const [isWalletInstalled, setIsWalletInstalled] = useState(false)
+  const [account, setAccount] = useState(null)
+  const [isWalletConnect,setIsWalletConnect] = useState("Connect")
+
+  const connectToMeta = async() => {
+
+    if(window.ethereum){
+
+      window.ethereum.request( {method: "eth_requestAccounts"})
+      .then((accounts) => {
+        setAccount(accounts[0]);
+        setIsWalletConnect("Connected")
+      }).catch( (e) => {
+        alert(e)
+      })
+    }
+
+    else{
+      window.alert("Please Install Metamask!")
+    }
+
+  }
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <span className="logo">MedTech</span>
@@ -32,14 +57,23 @@ export default function Navbar() {
             </a>
           </li>
 
-          {/* <li className="nav-item">
-          <a className="nav-link  active" aria-current="page"  href="/">Reels</a>
-        
-        </li> */}
+          <li className="nav-item">
+            <a className="nav-link " aria-current="page" href="#/GetDetails">
+              GetDetails
+            </a>
+          </li>
+
+          <li className="nav-item">
+            <a className="nav-link " aria-current="page" href="#/Insurence">
+              Insurence
+            </a>
+          </li>
+
+       
         </ul>
         <div className="login">
-        <button className="btn" type="submit">
-            Login 
+        <button className="btn" onClick={connectToMeta} >
+            {isWalletConnect} 
           </button>
           </div>
       
