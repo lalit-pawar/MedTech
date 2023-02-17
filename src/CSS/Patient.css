@@ -1,4 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Playfair+Display:ital,wght@1,400;1,900&family=Signika:wght@500&family=Ubuntu:ital,wght@0,300;0,400;1,400&display=swap');
+
+
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;
+
+}
+
+.forminput{
+   margin: 30px 0px 0px 340px;
+    max-width: 500px;
+    width: 100%;
+ background:white;
+    padding: 25px 30px;
+    border-radius: 10px;
+  
+ 
+}
+
+.forminput .title{
+
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+.forminput form .Userdetails{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.input-box{
+    margin: 20px 0 12px 0;
+    width: 100px;
+}
+
+.forminput .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+}
+
+.forminput .input-box input{
+
+    height:  45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    padding-left: 15px;
+    font-size: 18px;
+    border-bottom-width: 2px ;
+    border-color: rgb(95, 234, 222);
+}
+
+.Gender-details  .gender-title{
+     
+    
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 310px;
+}
+
+.forminput .Gender-details .category{
+
+    display: flex;
+    width: 80%;
+    margin: 15px 0;
+    justify-content: space-between;
+}
+
+.Gender-details .category label{
+
+     display: flex;
+     align-items: center;
+
+}
+
+.Gender-details .category .dot{
+
+           height: 18px;
+           width: 18px;
+           background: #d9d9d9;
+           border-radius: 50%;
+           margin-right: 10px;
+           border: 5px solid transparent;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+
+    border-color:rgb(95, 234, 222);
+    background: #9b59b6;
+}
+
+form input [type="radio"]{
+
+     display: none;
+}
+
+form .button{
+
+     height: 45px;
+     margin: 45px 0;
+     
+}
+
+form .button input{
+
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#71b7e6,#60aee2);
+}
+
+form .button input:hover{
+
+    background: linear-gradient(-135deg, #71b7e6,#9b59b6);
+}
+
+form .Userdetails .input-box{
+
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+form .Gender-details .category{
+      width: 100%;
+}
+
+.forminput form .Userdetails{
+
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.Userdetails::-webkit-scrollbar{
+    width: 0;
 }

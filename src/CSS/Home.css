@@ -4,7 +4,7 @@
 .doctor-img{
 
     width: 500px;
-    height: 350px;
+    height: 400px;
     margin: -290px 5px 0 577px;
 }
 
@@ -33,9 +33,6 @@
     position: unset;
   }
   
-  .slider_section .detail-box {
-    color: #1fab89;
-  }
   
   .slider_section .detail-box h1 {
     font-size: 3rem;
@@ -43,15 +40,15 @@
     text-transform: uppercase;
     margin-bottom: 15px;
 
-    margin-left: -65px;
+    margin-left: -50px;
     color: black;
   }
   
   .slider_section .detail-box p {
     color: black;
-    font-size: 14px;
-    margin-left: -40px;
-    margin-top: 35px;
+    font-size: 18px;
+    margin-left: -74px;
+    margin-top: 20px;
   }
   
   .slider_section .detail-box .btn-box {
@@ -72,17 +69,17 @@
   .slider_section .detail-box .btn-box .btn1 {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #ffffff;
-    color: black;
+    background: linear-gradient(135deg,#71b7e6,#60aee2);
+    color: #fff;
     border-radius: 5px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    border: 1px solid blue;
+    
   }
   
   .slider_section .detail-box .btn-box .btn1:hover {
-    background-color: transparent;
-    color: blue;
+    background: linear-gradient(-135deg, #71b7e6,#9b59b6);
+    color: #fff;
   }
   
 h2{
@@ -95,5 +92,6 @@ h2{
 
 p{
 
-  font-size: 19.5px;
+  font-size: 22.5px;
 }
+

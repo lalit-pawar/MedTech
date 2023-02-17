@@ -3,3 +3,40 @@ body{
    background-color: 
    #00dbde;
 } 
+
+
+.booking-form .form-control {
+   background: white;
+   border-radius: 0;
+   border: 0;
+   border-bottom: 1px solid var(--border-color);
+   color: #6c757d;
+   font-weight: var(--font-weight-normal);
+   padding-top: 12px;
+   padding-bottom: 12px;
+   margin-top: 5px;
+   transition: all 0.3s;
+ }
+
+ h2{
+
+    margin-left: 20px;
+ }
+ 
+ .booking-form #submit-button {
+  background: linear-gradient(135deg,#71b7e6,#60aee2);
+   border-bottom: 0;
+   font-weight: var(--font-weight-semibold);
+   color: #fff;
+   text-transform: uppercase;
+   margin-top: 20px;
+   border-radius: 5px;
+ }
+ 
+ .booking-form #submit-button:hover {
+   background: white;
+   background: linear-gradient(-135deg, #71b7e6,#9b59b6);
+ }
+
+
+ 
