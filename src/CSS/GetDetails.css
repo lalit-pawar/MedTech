@@ -1,0 +1,14 @@
+.UserAddressInput{
+    width: 30%;
+    height: 45px;
+    border-radius: 10px;
+    border: 0.1px  solid black;
+    text-align: center;
+
+}
+
+.getDetailsBtn{
+    padding: 8px;
+    border-radius: 8px;
+
+}

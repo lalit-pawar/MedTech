@@ -3,6 +3,12 @@ import "../CSS/Patient.css";
 import "../App.css";
 
 function Patient() {
+
+
+const getUserName = (e) => {
+  console.log(e.target.value)
+}
+
   return (
     <>
     <h1>Patient</h1>
@@ -12,11 +18,7 @@ function Patient() {
           <div className="Userdetails">
             <div className="input-box">
               <span className="details">Full Name</span>
-              <input
-                type="text"
-                placeholder="Enter Your Name "
-                required
-              ></input>
+              <input onChange={getUserName} type="text" placeholder="Enter Your Name " required></input>
             </div>
             <div className="input-box">
               <span className="details">Wallet Address</span>
@@ -60,7 +62,7 @@ function Patient() {
            
           </div>
           </div>
-          <div className="Gender-details">
+          <div  className="Gender-details">
             <input type="radio" name="gender" id="dot-1" />
             <input type="radio" name="gender" id="dot-2" />
             <input type="radio" name="gender" id="dot-3" />
