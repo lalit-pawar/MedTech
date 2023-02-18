@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="container-fluid">
         <ul className="navbar-nav me">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="/#/">
+            <a className="nav-link " aria-current="page" href="/#/">
               Home
             </a>
           </li>
@@ -68,14 +68,17 @@ export default function Navbar() {
               Insurence
             </a>
           </li>
-
-       
-        </ul>
-        <div className="login">
+          <li className="nav-item">
+          <div className="login">
         <button className="btn" onClick={connectToMeta} >
             {isWalletConnect} 
           </button>
           </div>
+          </li>
+
+       
+        </ul>
+       
       
       </div>
     </nav>

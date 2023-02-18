@@ -1,97 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Playfair+Display:ital,wght@1,400;1,900&family=Signika:wght@500&family=Ubuntu:ital,wght@0,300;0,400;1,400&display=swap');
 
-
-.doctor-img{
-
-    width: 500px;
-    height: 400px;
-    margin: -290px 5px 0 577px;
+.mainContainer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90vh;
+  background-color: #fff;
+  background: url('/public/bacdoc.jpg');
+  background-size: 100% 100%;
 }
 
-.slider_section {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    padding: 45px 0 145px 0;
-  }
-  
-  .slider_section .row {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .slider_section #customCarousel1 {
-    width: 100%;
-    position: unset;
-  }
-  
-  
-  .slider_section .detail-box h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-
-    margin-left: -50px;
-    color: black;
-  }
-  
-  .slider_section .detail-box p {
-    color: black;
-    font-size: 18px;
-    margin-left: -74px;
-    margin-top: 20px;
-  }
-  
-  .slider_section .detail-box .btn-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 -5px;
-    margin-top: 30px;
-    margin-left: 150px;
-  }
-  
-  .slider_section .detail-box .btn-box a {
-    margin: 5px;
-    text-align: center;
-    width: 165px;
-  }
-  
-  .slider_section .detail-box .btn-box .btn1 {
-    display: inline-block;
-    padding: 10px 15px;
-    background: linear-gradient(135deg,#71b7e6,#60aee2);
-    color: #fff;
-    border-radius: 5px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    
-  }
-  
-  .slider_section .detail-box .btn-box .btn1:hover {
-    background: linear-gradient(-135deg, #71b7e6,#9b59b6);
-    color: #fff;
-  }
-  
-h2{
-
-    color: black;
-    font-size: 2rem;
-    font-family: 'Signika', sans-serif;
-    margin-left: -70px;
+.docpic img{
+  width: 10rem;
+  height: 15rem;
 }
 
-p{
-
-  font-size: 22.5px;
+.description{
+  background-color: #a8c4f5aa;
+  width: 100%;
+  color: #0c3a8a;
+ margin: 3rem 2rem 2rem 8rem;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+  border-radius: 1rem;
 }
 
+.docpic{
+  width: 100%;
+}
+
+.description p{
+  width: 80%;
+  margin-top: 1rem;
+  font-size: large;
+  font-weight: 300;
+  font-size: 1.5rem;
+  
+}
+
+.description h1{
+  margin-top:2rem;
+  font-weight: 300;
+}
+
+.rbtn{
+  background-color: #0c3a8a;
+  color: #fff;
+  padding:.5rem .5rem .5rem .5rem ;
+  border-radius: .5rem;
+  width: 10rem;
+  cursor: pointer;
+}
