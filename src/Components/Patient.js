@@ -100,11 +100,7 @@ function Patient() {
            
           </div>
           </div>
-          <div  className="Gender-details">
-            <input type="radio" name="gender" id="dot-1" />
-            <input type="radio" name="gender" id="dot-2" />
-            <input type="radio" name="gender" id="dot-3" />
-            
+           
             <span className="gender-title">
               Gender
             </span>
@@ -114,7 +110,7 @@ function Patient() {
         <input type="radio" value="Other" name="gender" onChange={handleGender}/> Other
             </div>
           
-          </div>
+           
           <div className="button">
             <input type="Submit" value="Register" onClick={handleRegister}>
               
