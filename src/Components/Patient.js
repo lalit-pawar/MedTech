@@ -10,6 +10,7 @@ function Patient() {
   var nomineeName = '';
   var nomineeMoNo = '';
   var document = '';
+  var gender = '';
   const nameRef = useRef('');
   const walletRef = useRef('');
   const adharRef = useRef('');
@@ -28,6 +29,11 @@ function Patient() {
       nomineeMoNo = nomineMRef.current.value;
       document = documentRef.current.files[0];
       console.log(name);
+      console.log(gender);
+  }
+
+  function handleGender(e){
+    gender = e.target.value;
   }
   return (
     <>
@@ -99,9 +105,9 @@ function Patient() {
               Gender
             </span>
             <div className="category">
-            <input type="radio" value="Male" name="gender"  /> Male
-        <input type="radio" value="Female" name="gender" /> Female
-        <input type="radio" value="Other" name="gender" /> Other
+            <input type="radio" value="Male" name="gender"  onChange={handleGender}/> Male
+        <input type="radio" value="Female" name="gender" onChange={handleGender}/> Female
+        <input type="radio" value="Other" name="gender" onChange={handleGender}/> Other
             </div>
           
           </div>
