@@ -5,39 +5,21 @@ import "../App.css";
 function Home() {
   return (
     <>
-      <section class="slider_section ">
-        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container ">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="detail-box">
-                      <h1>We Are Here For Your Care</h1>
-
-                      <p>
-                        The Future of Healthcare is just front of you. The
-                        securest way to consult. Do not worry,We believe in your
-                        privacy.Get a personalized health Prescription with just
-                        one click.
-                      </p>
-                      <div class="btn-box">
-                        <a href="" class="btn1">
-                          Read More
-                        </a>
-                      </div>
-
-                      <div className="doctor-img">
-                        <img src="doctor.jpg"></img>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      {" "}
+      <div className="mainContainer">
+        <div className="description">
+          <h1>We Are Here For Your Care</h1>
+          <p style={{ color: "#0c3a8a" }}>
+            Experience the future of healthcare today. Our personalized health
+            prescription service is just one click away, offering you a secure
+            and private consultation. You can trust our commitment to your
+            privacy. Take the first step towards a healthier you and consult
+            with ease.
+          </p>
+          <div className="rbtn">Read More</div>
         </div>
-      </section>
+        <div className="docpic"></div>
+      </div>
     </>
   );
 }
