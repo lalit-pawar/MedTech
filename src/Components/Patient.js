@@ -1,9 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "../CSS/Patient.css";
 import "../App.css";
+import { NFTStorage } from "nft.storage";
 
 function Patient() {
  
+  const [metaDataURL, setMetaDataURl] = useState();
+
+  const API_KEY ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDFhNWNiQTlFYkQwRTcxZWE4NTA0Zjk5NGE0MkNBOUE3MWRlQTkwZTAiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2MTU3NjQ1MTE4MCwibmFtZSI6Ikluc3RpdHV0ZSBNYW5hZ2VtZW50In0.s4o-sf9pRDr7oZq-zTDiedhNm49JW_AKGibtGOCg9VY";
+
   var name = '';
   var walletAdd = '';
   var adharNo = ''; 
@@ -21,6 +26,12 @@ function Patient() {
   const genderRef = useRef('');
   const documentRef = useRef(null);
 
+
+  const registerUser = async () => {
+    console.log( "From the register",name)
+    console.log(walletAdd)
+  }
+
  function handleRegister(){
       name = nameRef.current.value;
       walletAdd = walletRef.current.value;
@@ -30,12 +41,28 @@ function Patient() {
       nomineeMoNo = nomineMRef.current.value;
       document = documentRef.current.files[0];
       console.log(name);
-      console.log(gender);
   }
 
-  function handleGender(e){
-    gender = e.target.value;
-  }
+  const uploadDetailsToIPFS = async (inputFile) => {
+    // uploadFile should be passed here.
+    const nftStorage = new NFTStorage({ token: API_KEY });
+
+    try {
+      const metaData = await nftStorage.store({
+        name: name,
+        WalletAddress: walletAdd,
+        aadharNo: adharNo,
+        image: uploadFile, // Banner image for the Project
+      });
+
+      MetaDataURL = metaData.url;
+      console.log(metaData.url);
+      console.log(metaData);
+      return metaData;
+    } catch (error) {
+      alert(error);
+    }
+  };
  
   return (
     <>
@@ -112,11 +139,13 @@ function Patient() {
           
            
           <div className="button">
-            <input type="Submit" value="Register" onClick={handleRegister}>
+            <input type="button" value="Register" onClick={handleRegister}>
               
             </input>
           </div>
         </form>
+
+        <button onClick={registerUser}>registerUser</button>
       </div>
     </>
   );
