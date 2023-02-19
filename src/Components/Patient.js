@@ -181,7 +181,7 @@ function Patient() {
           </div>
         </form>
 
-        <button onClick={registerUser}>registerUser</button>
+        {/* <button onClick={registerUser}>registerUser</button> */}
       </div>
     </>
   );
