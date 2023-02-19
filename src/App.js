@@ -7,6 +7,7 @@ import Patient from "./Components/Patient";
 import Video_Consult from "./Components/Video Consult";
 import GetDetails from "./Components/GetDetails";
 import Insurence from "./Components/Insurence";
+import WhitelistDoctor from "./Components/WhitelistDoctor";
 
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
               <GetDetails/>
             </Route>
             
+            <Route exact path="/WhitelistDoctor">
+              <WhitelistDoctor/>
+            </Route>
+
             <Route exact path="/Insurence">
               <Insurence/>
             </Route>

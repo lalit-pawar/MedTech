@@ -1,22 +1,29 @@
 import React, { useRef, useState } from "react";
+import { NFTStorage } from "nft.storage";
 import "../CSS/Patient.css";
 import "../App.css";
-import { NFTStorage } from "nft.storage";
+import { ethers } from "ethers";
+import { CONTRACT_ABI, CONTRACT_ADDRESS } from "../Constants/Constants";
 
 function Patient() {
  
+  // const [metaDataURL, setMetaDataURl] = useState();
   const [metaDataURL, setMetaDataURl] = useState();
+  const [uploadFile ,setUploadFile] = useState()
+
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const signer = provider.getSigner();
+    
 
   const API_KEY ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDFhNWNiQTlFYkQwRTcxZWE4NTA0Zjk5NGE0MkNBOUE3MWRlQTkwZTAiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2MTU3NjQ1MTE4MCwibmFtZSI6Ikluc3RpdHV0ZSBNYW5hZ2VtZW50In0.s4o-sf9pRDr7oZq-zTDiedhNm49JW_AKGibtGOCg9VY";
-
   var name = '';
   var walletAdd = '';
   var adharNo = ''; 
   var bloodG = '';
   var nomineeName = '';
-  var nomineeMoNo = '';
-  var document = '';
-  var gender = '';
+  var nomineeWalletAddress = '';
+  var document;
+  var gender=''
   const nameRef = useRef('');
   const walletRef = useRef('');
   const adharRef = useRef('');
@@ -35,12 +42,16 @@ function Patient() {
  function handleRegister(){
       name = nameRef.current.value;
       walletAdd = walletRef.current.value;
-      adharNo = adharRef.current.value;
+      // adharNo = adharRef.current.value;
       bloodG = bloodRef.current.value;
       nomineeName = nomineNRef.current.value;
-      nomineeMoNo = nomineMRef.current.value;
-      document = documentRef.current.files[0];
-      console.log(name);
+      nomineeWalletAddress = nomineMRef.current.value;
+      // document = documentRef.current.files[0];
+  
+      
+      registerUser()
+      uploadDetailsToIPFS()
+
   }
 
   const uploadDetailsToIPFS = async (inputFile) => {
@@ -50,19 +61,39 @@ function Patient() {
     try {
       const metaData = await nftStorage.store({
         name: name,
+        description:"Description will be here",
         WalletAddress: walletAdd,
-        aadharNo: adharNo,
-        image: uploadFile, // Banner image for the Project
+        BloodGroup: bloodG,
+        gender:gender,
+        nomineeName:nomineeName,
+        nomineeWalletAddress: nomineeWalletAddress,
+        // image: document, // Banner image for the Project
+        image: uploadFile
       });
 
-      MetaDataURL = metaData.url;
-      console.log(metaData.url);
-      console.log(metaData);
+      // MetaDataURL = metaData.url;
+      console.log("metaData.url",metaData.url);
+      console.log("metaData:- ", metaData);
+      setMetaDataURl(metaData.url)
+
+      const contractInstance = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer)
+
+      let makeTx = await contractInstance.onBoardUser(metaData.url,nomineeWalletAddress )
+      window.alert("Patient address !")
       return metaData;
     } catch (error) {
-      alert(error);
+      window.alert(error)
     }
+    
   };
+
+  function handleGender(e){
+    gender = e.target.value;
+  }
+  const handleFileUpload= async(event) =>{
+    event.preventDefault()
+    setUploadFile(event.target.files[0])
+  }
  
   return (
     <>
@@ -91,7 +122,7 @@ function Patient() {
                 ref = {walletRef}
               ></input>
             </div>
-            <div className="input-box">
+            {/* <div className="input-box">
               <span className="details"> Aadhar No </span>
               <input
                 type="text"
@@ -99,7 +130,7 @@ function Patient() {
                 required
                 ref = {adharRef}
               ></input>
-            </div>
+            </div> */}
             <div className="input-box">
               <span className="details"> Blood group </span>
               <input
@@ -115,29 +146,34 @@ function Patient() {
             </input>
           </div>
           <div className="input-box">
-            <span className="details"> Nominee Mobile No</span>
-            <input type="text" placeholder="Enter Nominee Mobile No" required ref = {nomineMRef}>
+            <span className="details"> Nominee Wallet Address</span>
+            <input type="text" placeholder="Enter Nominee Wallet Address" required ref = {nomineMRef}>
             </input>
           </div>
           <div className="input-box">
             <span className="details"> Submit Medical documents </span>
-            <input type="file" placeholder=" choose files " required ref = {documentRef}>
+            {/* <input type="file" placeholder=" choose files " required ref = {documentRef}> */}
+            <input type="file" placeholder=" choose files " onChange={handleFileUpload} >
              
             </input>
            
           </div>
           </div>
-           
+          <div  className="Gender-details">
+            <input type="radio" name="gender" id="dot-1" />
+            <input type="radio" name="gender" id="dot-2" />
+            <input type="radio" name="gender" id="dot-3" />
+            
             <span className="gender-title">
               Gender
             </span>
             <div className="category">
-            <input type="radio" value="Male" name="gender"  onChange={handleGender}/> Male
-        <input type="radio" value="Female" name="gender" onChange={handleGender}/> Female
-        <input type="radio" value="Other" name="gender" onChange={handleGender}/> Other
+            <input type="radio" value="Male" onChange={handleGender} name="gender"  /> Male
+        <input type="radio" value="Female" onChange={handleGender} name="gender" /> Female
+        <input type="radio" value="Other" onChange={handleGender} name="gender" /> Other
             </div>
           
-           
+          </div>
           <div className="button">
             <input type="button" value="Register" onClick={handleRegister}>
               

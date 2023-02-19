@@ -64,10 +64,17 @@ export default function Navbar() {
           </li>
 
           <li className="nav-item">
+            <a className="nav-link " aria-current="page" href="#/WhitelistDoctor">
+            WhitelistDoctor
+            </a>
+          </li>
+          
+          <li className="nav-item">
             <a className="nav-link " aria-current="page" href="#/Insurence">
               Insurence
             </a>
           </li>
+
           <li className="nav-item">
           <div className="login">
         <button className="btn" onClick={connectToMeta} >

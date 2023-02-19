@@ -1,0 +1,27 @@
+.VerfiyUserBtn {
+    padding: 6px;
+    margin-top: 1%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: 18%;
+    margin-left: 20px;
+}
+
+.alignCards {
+    display: grid;
+    /* grid-auto-columns: auto auto; */
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+
+.InsurenceBtn{
+    padding: 6px;
+    width: 38%;
+    border-radius: 10px;
+}
+.VerifyPatienBtn{
+    padding: 6px;
+    width: 18%;
+    margin-left: 10px;
+    border-radius: 10px;
+}
