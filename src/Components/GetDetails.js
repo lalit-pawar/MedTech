@@ -34,7 +34,7 @@ function GetDetails() {
         console.log("projectDesc-----------",projectDesc.name)
         console.log("projectDesc-----------",projectDesc.BloodGroup)
 
-        alert(`User Details \n Name:- ${projectDesc.name} \n BloocGroup:- ${projectDesc.BloodGroup} \n Other details will be shown to only authorised entity`)
+        alert(`User Details \n Name:- ${projectDesc.name} \n Emergency Contact:- ${projectDesc.nomineeName} \n Other details will be shown to only authorised entity`)
         
     }
 
